@@ -17,7 +17,7 @@ The project is provided as-is so that others may use the script to create either
 
 # Instructions
 - Clone the repository.
-- Run `pip3 -U nfcpy json requests python-dotenv`
+- Run `pip3 install -U nfcpy json requests python-dotenv`
 - Setup your .env file, specifying the WEBHOOK_URL to call.
 - Run the script.
 
