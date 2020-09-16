@@ -18,5 +18,7 @@ The project is provided as-is so that others may use the script to create either
 # Instructions
 - Clone the repository.
 - Run `pip3 -U nfcpy json requests python-dotenv`
+- Setup your .env file, specifying the WEBHOOK_URL to call.
+- Run the script.
 
 If you're on windows, you'll need to install libusb. You can follow the instructions here: https://nfcpy.readthedocs.io/en/latest/topics/get-started.html.
