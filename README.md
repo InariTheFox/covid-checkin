@@ -15,10 +15,14 @@ The project is provided as-is so that others may use the script to create either
 - A WiFi or Ethernet Connection.
 - A webhook service to send the NFC tag's UID to.
 
+## Optional Requirements
+- The Adafruit 2.8" TFT Touchscreen (or similar) PiHat.
+
 # Instructions
 - Clone the repository.
 - Run `pip3 install -U nfcpy requests python-dotenv`
 - Setup your .env file, specifying the WEBHOOK_URL to call.
+- If you have the Adafruit TFT PiHat attached, set the pin values for the buttons that correspond to your model.
 - Run the script.
 
 If you're on windows, you'll need to install libusb. You can follow the instructions here: https://nfcpy.readthedocs.io/en/latest/topics/get-started.html.
