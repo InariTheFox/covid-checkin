@@ -1,3 +1,11 @@
+#
+# Copyright (C) Brandon Dobbie
+# All rights reserved.
+# 
+# This code is licensed under the MIT license.
+# See the LICENSE file for more information.
+#
+
 import nfc
 import time
 import platform
@@ -10,12 +18,14 @@ from nfc.clf import RemoteTarget
 from dotenv import load_dotenv
 from datetime import datetime
 
+# Attempt to load the PiTFT_GPIO package.
 try:
     from pitftgpio import PiTFT_GPIO
+    pitft = PiTFT_GPIO()
 except ImportError:
     # Do nothing as we can't import the PiTFT_GPIO package when we're
     # running on Windows.
-    x = 0
+    pitft = None
 
 # Load environment variables in .env.
 load_dotenv()
@@ -30,12 +40,8 @@ def clear():
     else:
         os.system('clear')
 
-# Clear the screen and setup the TFT screen GPIO buttons.
+# Clear the screen.
 clear()
-pitft = None
-
-if platform.system().lower() != 'windows':
-    PiTFT_GPIO()
 
 # Setup the NFC reader.
 try:
